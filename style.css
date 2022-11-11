@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--Violet);
+    background-image: url('images/bg-desktop.svg');
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+  
+}
+.container{
+    margin: 2rem  auto 1rem;
+    width: 1200px;
+    max-width:100%;
+}
+header a img{
+    width: 180px;
+    margin-bottom: 2rem;
+    
+}
+.landing{
+    display: flex;
+    gap: 30px;
+}
+.landing .image{
+    flex:1
+}
+.landing .text{
+    flex:1
+
+}
+.landing .image img{
+    max-width: auto;
+}
+.landing .text h1{
+color: white;
+max-width: 400px;
+margin-top: 2.5rem;
+}
+.landing .text p{
+    color: white;
+    line-height: 1.7;
+    margin: 1rem 0 2rem;
+    opacity: .8;
+}
+.landing .text button{
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 2px 4px 10px rgba(0,0,0,.3);
+    cursor: pointer;
+    color: var(--Violet);
+    display: block;
+    width: 180px;
+    transition: .3s;
+}
+.landing .text button:hover{
+    color: white;
+    background-color: var(--Soft-Magenta);
+}
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 6rem;
+}
+.social-icons i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    transition: .3s ;
+    cursor: pointer;
+}
+.social-icons i:hover{
+    color: var(--Soft-Magenta);
+    border-color: var(--Soft-Magenta);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color:white; }
+
+/*Responsive query*/
+@media (max-width:1200px){
+    .container{
+        width: 950px;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    .landing .image img{
+        width: 400px;
+        margin-top: 3rem;
+    }
+    .landing.text h1{
+        font-size: 18px;
+        width: 300px;
+    }
+    
+}
+@media (max-width:850px){
+    .container{
+        width: 450px;
+        max-width: 100%;
+    }
+    header a img{
+        margin-bottom: 0rem;
+    }
+    .landing {
+        flex-direction: column;
+        text-align: center;
+    }
+    .landing .image img{
+        width: 350px;
+    }
+    .landing .text h1{
+        font-size: 30px;
+        margin-top: 1rem;
+    }
+    .landing .text button{
+        display: block;
+        margin: auto;
+    }
+    .social-icons{
+        justify-content: center;
+        align-items: center;
+    }
+}
